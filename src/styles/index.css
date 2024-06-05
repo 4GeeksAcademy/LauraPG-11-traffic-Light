@@ -1,4 +1,4 @@
-.text-center {
+.mainContainer {
    /* height: 100vh;con esto habilitariamos el centrado horizontal*/
     display: flex;
     justify-content: center; 
@@ -16,13 +16,12 @@
     width: 90px;
     height: 250px;
     background-color: #121;
-    border-radius: 15px;
     box-sizing: border-box;
     padding: 5px;
     
 }
 
-.red, .yellow, .green {
+.red, .yellow, .green, .rainbow {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -30,17 +29,53 @@
 
 .red{
     background-color: #f11;
+    
    
 }
 .yellow{
     background-color: rgb(250, 179, 46);  
+
 }
 .green{
     background-color: #5f3;  
+
 }
+
+.rainbow{
+    background: linear-gradient(to bottom, #f16363, #edf581, rgb(158, 243, 141), rgb(115, 201, 252), rgb(238, 142, 247))
+}
+ 
 
 .active{
     box-shadow: 0px 0px 30px 25px rgba(235, 235, 167, 0.904)
+}
+
+#colorExtra{
+    width: 90px;
+    height: 90px;
+    background-color: #121;
+    box-sizing: border-box;
+    padding: 5px 0 5px 5px;
+
+}
+.positionButton{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    flex-direction: column;  
+    align-items: center;      
+
+}
+
+button{
+    margin: 20px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(213, 170, 238);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+
 }
 
 /* 
