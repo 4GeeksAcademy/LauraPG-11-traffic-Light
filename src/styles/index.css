@@ -6,6 +6,7 @@
     flex-direction: column;  
     align-items: center;        
   }
+
 #trafficTop{
     width: 15px;
     height: 100px;
@@ -17,8 +18,7 @@
     height: 250px;
     background-color: #121;
     box-sizing: border-box;
-    padding: 5px;
-    
+    padding: 5px;   
 }
 
 .red, .yellow, .green, .rainbow {
@@ -28,24 +28,20 @@
 }
 
 .red{
-    background-color: #f11;
-    
-   
+    background-color: #f11;  
 }
 .yellow{
     background-color: rgb(250, 179, 46);  
-
 }
+
 .green{
     background-color: #5f3;  
-
 }
 
 .rainbow{
     background: linear-gradient(to bottom, #f16363, #edf581, rgb(158, 243, 141), rgb(115, 201, 252), rgb(238, 142, 247))
 }
  
-
 .active{
     box-shadow: 0px 0px 30px 25px rgba(235, 235, 167, 0.904)
 }
@@ -56,36 +52,25 @@
     background-color: #121;
     box-sizing: border-box;
     padding: 5px 0 5px 5px;
-
 }
+
 .positionButton{
     display: flex;
     justify-content: center; 
     align-items: center;     
     flex-direction: column;  
     align-items: center;      
-
 }
 
 button{
     margin: 20px;
     width: 150px;
+    height: 60px;
     border-radius: 10px;
     border: none;
     background-color: rgb(213, 170, 238);
     font-family:'Courier New', Courier, monospace;
     font-weight: 600;
-
 }
 
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/

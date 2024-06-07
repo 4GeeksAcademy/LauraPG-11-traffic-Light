@@ -1,34 +1,37 @@
 
 import React, { useState } from "react";
 
+const ButtonRainbow = ({ propLight, propsetLight }) => {
+    const [showElement, setShowElement] = useState(false);
 
-
-    const ButtonRainbow = () => {
-        const [showElement, setShowElement] = useState(false);
-
-
-    
-        return (
-            <div>
-                <div className="mainContainer">
-
-                    {showElement && (
-                        <div id="colorExtra">
-                            <div className="rainbow"></div>
-                        </div>
-                    )}
+    return showElement ? (
+        <>
+            <div className="mainContainer">
+                <div id="colorExtra">
+                    <div className={`rainbow ${propLight === "rainbowLight" ? "active" : ""}`}
+                        onClick={() => propsetLight("rainbowLight")}></div>
                 </div>
+            </div>
+            <div className="positionButton">
+                <button onClick={() => setShowElement(false)}>
+                    Hide Amazing Thing
+                </button>
+            </div>
+        </>
+    ) : (
+        <>
+            <div className="mainContainer">
                 <div className="positionButton">
-                    {/* Cambiar el estado para mostrar u ocultar el elemento adicional al hacer clic en el botón */}
-                    <button onClick={() => setShowElement(!showElement)}>
-                        {showElement ? "Hide Amazing Thing" : "Show Amazing Thing"}
+                    <button onClick={() => setShowElement(true)}>
+                        Show Amazing Thing
                     </button>
                 </div>
             </div>
-        );
-    };
-    
-    export default ButtonRainbow;
+        </>
+    );
+};
+
+export default ButtonRainbow;
 
 
 

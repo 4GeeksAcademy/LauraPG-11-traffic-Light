@@ -1,20 +1,11 @@
 import React, { useState } from "react";
-import Button from "./Button.jsx"
-
-
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 import ButtonRainbow from "./Button.jsx";
-
-//create your first component
-
+import ButtonRandom from "./ButtonRandom.jsx";
 
 
 const Home = () => {
 
 	const [light, setLight] = useState("")
-	
 
 	return (
 		<div>
@@ -43,9 +34,11 @@ const Home = () => {
 						className={`green ${light === "greenLight" ? "active" : ""}`}
 						onClick={() => setLight("greenLight")}
 					></div>
-					
-					<ButtonRainbow/>
-		
+
+					<ButtonRainbow propLight={light} propsetLight={setLight} />
+
+					<ButtonRandom propsetLight={setLight} />
+
 				</div>
 
 			</div>
